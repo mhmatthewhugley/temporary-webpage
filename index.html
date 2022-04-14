@@ -417,6 +417,22 @@
                 pointer-events: auto;
             }
         </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $("input[type=radio]").each(function () {
+                var name = $(this).attr("name");
+
+                if (localStorage.getItem(name) == "true") {
+                    $(this).prop("checked", true);
+                }
+            });
+
+            $("input[type=radio]").change(function () {
+                var name = $(this).attr("name"),
+                    value = $(this).is(":checked");
+                localStorage.setItem(name, value);
+            });
+        </script>
     </head>
     <body>
         <input id="default" name="changer" type="radio" class="theme-box" checked="" /> <input id="dark" name="changer" type="radio" class="theme-box" />
