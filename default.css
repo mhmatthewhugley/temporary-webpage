@@ -151,9 +151,9 @@ ul {
 #blue-btn > span,
 #blue:checked ~ * {
     --text: #fff;
-    --glare: #0037ff;
-    --base: #0028b8;
-    --shade: #0037ff;
+    --glare: #3e76a7;
+    --base: #305c82;
+    --shade: #3e76a7;
     --ui: #fff;
 }
 #dd-btn > span,
